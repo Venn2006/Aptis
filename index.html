@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Aptis Start - web luyện thi Aptis đơn giản cho người mới bắt đầu." />
+  <title>Aptis Start — Học từ số 0</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Aptis Start trang chủ"><span class="brand-mark">A</span><span>Aptis<span class="brand-accent">Start</span></span></a>
+    <nav class="nav" aria-label="Điều hướng chính"><a href="#learn">Lộ trình</a><a href="#practice">Luyện tập</a><a href="#tips">Mẹo thi</a></nav>
+    <button class="ghost-btn" id="resetProgress">Đặt lại tiến độ</button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy"><p class="eyebrow">Aptis cho người mới bắt đầu</p><h1>Học chậm mà chắc,<br><span>tiến bộ mỗi ngày.</span></h1><p class="hero-text">Bài học ngắn 10 phút, từ vựng dễ nhớ và luyện từng kỹ năng một. Không áp lực, chỉ cần bắt đầu.</p><div class="hero-actions"><a class="primary-btn" href="#practice">Bắt đầu học <span>→</span></a><button class="text-btn" id="showPlan">Xem lộ trình 4 tuần</button></div></div>
+      <div class="hero-card"><div class="streak-icon">✦</div><p class="card-label">Mục tiêu hôm nay</p><h2>10 phút tiếng Anh</h2><div class="progress-track"><div class="progress-bar" id="dailyProgress"></div></div><p class="progress-note"><strong id="dailyDone">0</strong>/3 hoạt động hoàn thành</p><div class="mini-quote">“Mỗi câu đúng là một bước tiến.”</div></div>
+    </section>
+
+    <section class="section" id="learn"><div class="section-heading"><div><p class="eyebrow">Lộ trình đơn giản</p><h2>Đi từng bước nhỏ</h2></div><span class="section-note">Tuần <strong id="weekNumber">1</strong> / 4</span></div><div class="steps"><article class="step active"><span>01</span><div><h3>Làm quen</h3><p>Biết dạng bài, học 30 từ vựng cơ bản.</p></div><i>✓</i></article><article class="step"><span>02</span><div><h3>Ghép câu</h3><p>Đọc câu ngắn và trả lời ý chính.</p></div><i>○</i></article><article class="step"><span>03</span><div><h3>Nói tự tin</h3><p>Luyện nói theo khung câu có sẵn.</p></div><i>○</i></article><article class="step"><span>04</span><div><h3>Ôn tổng hợp</h3><p>Làm mini test và xem lại lỗi sai.</p></div><i>○</i></article></div></section>
+
+    <section class="section practice-section" id="practice"><div class="section-heading"><div><p class="eyebrow">Chọn một bài</p><h2>Hôm nay mình học gì?</h2></div><span class="level-pill">Cơ bản · A1–A2</span></div><div class="practice-grid"><button class="practice-card" data-mode="vocab"><span class="practice-icon purple">Aa</span><span class="practice-info"><strong>Từ vựng nền tảng</strong><small>5 câu · 3 phút</small></span><span class="arrow">→</span></button><button class="practice-card" data-mode="reading"><span class="practice-icon orange">▤</span><span class="practice-info"><strong>Đọc hiểu siêu ngắn</strong><small>3 câu · 5 phút</small></span><span class="arrow">→</span></button><button class="practice-card" data-mode="speaking"><span class="practice-icon green">◉</span><span class="practice-info"><strong>Nói theo mẫu</strong><small>1 phút · có đồng hồ</small></span><span class="arrow">→</span></button><button class="practice-card" data-mode="grammar"><span class="practice-icon blue">✓</span><span class="practice-info"><strong>Ngữ pháp thiết yếu</strong><small>5 câu · 3 phút</small></span><span class="arrow">→</span></button></div></section>
+
+    <section class="section tips" id="tips"><div class="tips-card"><div><p class="eyebrow">Mẹo cho người yếu</p><h2>Đừng học thuộc cả câu.</h2><p>Hãy nhớ 3 khung câu dùng được ở mọi phần nói:</p></div><div class="sentence-chips"><span><b>I like</b> … because …</span><span><b>In my opinion</b> …</span><span><b>Usually, I</b> …</span></div></div></section>
+  </main>
+
+  <footer><span>© 2026 AptisStart · Học để tự tin hơn</span><a href="research/aptis-notes.md">Ghi chú nguồn & cấu trúc bài thi</a></footer>
+
+  <dialog id="practiceDialog"><div class="dialog-head"><div><p class="eyebrow" id="dialogEyebrow">Luyện tập</p><h2 id="dialogTitle">Từ vựng nền tảng</h2></div><button class="close-btn" id="closeDialog" aria-label="Đóng">×</button></div><div id="dialogBody"></div></dialog>
+  <script src="app.js"></script>
+</body>
+</html>
